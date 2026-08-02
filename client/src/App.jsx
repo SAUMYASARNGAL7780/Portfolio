@@ -51,7 +51,7 @@ const FALLBACK_PROFILE = {
   ],
   skills: {
     "Programming Languages": ["C", "C++", "Java", "Python", "JavaScript"],
-    "Web Technologies": ["HTML5", "CSS3", "React.js", "Node.js", "Express.js", "Bootstrap"],
+    "Web Technologies": ["HTML5", "CSS3", "React.js", "Node.js", "Express.js"],
     Databases: ["MySQL", "MongoDB"],
     "Frameworks & Libraries": ["Pandas", "NumPy", "Matplotlib"],
     "Core CS": ["Data Structures & Algorithms", "DBMS", "Operating Systems", "Computer Networks", "OOP", "AI"],
