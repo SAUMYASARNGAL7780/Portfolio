@@ -36,7 +36,7 @@ const FALLBACK_PROFILE = {
       role: "Cyber Security Intern",
       org: "C-DAC, Noida",
       date: "Jan 2025 – Mar 2025",
-      points: ["Learned Bash scripting, simulated network topologies using Cisco Packet Tracer, and analyzed network traffic using Wireshark."],
+      points: ["Learned Bash scripting, simulated network topologies using Cisco Packet Tracer, and analyzed network traffic using Wireshark, Learned about Cyber Security and ethical hacking"],
     },
     {
       role: "AI/ML Intern",
@@ -61,6 +61,7 @@ const FALLBACK_PROFILE = {
   achievements: [
     "NCC Cadet with active participation in drills and camps.",
     "Represented at National Level in Yoga and Regional Level in Youth Parliament.",
+    "Completed BMC Mountaineering Course "
   ],
 };
 
