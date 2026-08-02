@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SectionHeading } from "./About.jsx";
+import { API_BASE } from "../api.js";
 
 const COLORS = {
   pink: "bg-bubblegum/20 border-bubblegum",
@@ -17,7 +18,7 @@ export default function Guestbook() {
   const [status, setStatus] = useState("idle"); // idle | loading | sent | error
 
   useEffect(() => {
-    fetch("/api/notes")
+    fetch(`${API_BASE}/api/notes`)
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then(setNotes)
       .catch(() => setNotes([]));
@@ -28,7 +29,7 @@ export default function Guestbook() {
     if (!name.trim() || !text.trim()) return;
     setStatus("loading");
     try {
-      const res = await fetch("/api/notes", {
+      const res = await fetch(`${API_BASE}/api/notes`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, text, color }),

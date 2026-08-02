@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SectionHeading } from "./About.jsx";
+import { API_BASE } from "../api.js";
 
 export default function Contact({ contact = {} }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -13,7 +14,7 @@ export default function Contact({ contact = {} }) {
     e.preventDefault();
     setStatus("loading");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`${API_BASE}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

@@ -8,6 +8,7 @@ import Achievements from "./components/Achievements.jsx";
 import Guestbook from "./components/Guestbook.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import { API_BASE } from "./api.js";
 
 // Fallback data mirrors /api/profile in case the backend isn't running yet.
 const FALLBACK_PROFILE = {
@@ -67,7 +68,7 @@ export default function App() {
   const [profile, setProfile] = useState(FALLBACK_PROFILE);
 
   useEffect(() => {
-    fetch("/api/profile")
+    fetch(`${API_BASE}/api/profile`)
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => setProfile(data))
       .catch(() => {
